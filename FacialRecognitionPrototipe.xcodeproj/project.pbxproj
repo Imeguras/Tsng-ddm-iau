@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A20EAA8C2AE2E4B100792341 /* CNNEmotions.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A20EAA8B2AE2E4B100792341 /* CNNEmotions.mlmodel */; };
 		A2331B4A2AE19676008120BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2331B492AE19676008120BD /* AppDelegate.swift */; };
 		A2331B4C2AE19676008120BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2331B4B2AE19676008120BD /* SceneDelegate.swift */; };
 		A2331B4E2AE19676008120BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2331B4D2AE19676008120BD /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 		A2331B612AE1967A008120BD /* FacialRecognitionPrototipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2331B602AE1967A008120BD /* FacialRecognitionPrototipeTests.swift */; };
 		A2331B6B2AE1967A008120BD /* FacialRecognitionPrototipeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2331B6A2AE1967A008120BD /* FacialRecognitionPrototipeUITests.swift */; };
 		A2331B6D2AE1967A008120BD /* FacialRecognitionPrototipeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2331B6C2AE1967A008120BD /* FacialRecognitionPrototipeUITestsLaunchTests.swift */; };
+		A2331B7B2AE19715008120BD /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2331B7A2AE19715008120BD /* Vision.framework */; };
+		A2331B7D2AE1971B008120BD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2331B7C2AE1971B008120BD /* AVFoundation.framework */; };
+		A2331B7F2AE19723008120BD /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2331B7E2AE19723008120BD /* CoreML.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A20EAA892AE2D79D00792341 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
+		A20EAA8B2AE2E4B100792341 /* CNNEmotions.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = CNNEmotions.mlmodel; path = ../../../Downloads/CNNEmotions.mlmodel; sourceTree = "<group>"; };
 		A2331B462AE19676008120BD /* FacialRecognitionPrototipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacialRecognitionPrototipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2331B492AE19676008120BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2331B4B2AE19676008120BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,9 @@
 		A2331B662AE1967A008120BD /* FacialRecognitionPrototipeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacialRecognitionPrototipeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2331B6A2AE1967A008120BD /* FacialRecognitionPrototipeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialRecognitionPrototipeUITests.swift; sourceTree = "<group>"; };
 		A2331B6C2AE1967A008120BD /* FacialRecognitionPrototipeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialRecognitionPrototipeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A2331B7A2AE19715008120BD /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
+		A2331B7C2AE1971B008120BD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A2331B7E2AE19723008120BD /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2331B7D2AE1971B008120BD /* AVFoundation.framework in Frameworks */,
+				A2331B7B2AE19715008120BD /* Vision.framework in Frameworks */,
+				A2331B7F2AE19723008120BD /* CoreML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +95,7 @@
 				A2331B5F2AE1967A008120BD /* FacialRecognitionPrototipeTests */,
 				A2331B692AE1967A008120BD /* FacialRecognitionPrototipeUITests */,
 				A2331B472AE19676008120BD /* Products */,
+				A2331B792AE19714008120BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +119,7 @@
 				A2331B522AE19679008120BD /* Assets.xcassets */,
 				A2331B542AE19679008120BD /* LaunchScreen.storyboard */,
 				A2331B572AE19679008120BD /* Info.plist */,
+				A20EAA8B2AE2E4B100792341 /* CNNEmotions.mlmodel */,
 			);
 			path = FacialRecognitionPrototipe;
 			sourceTree = "<group>";
@@ -125,6 +139,17 @@
 				A2331B6C2AE1967A008120BD /* FacialRecognitionPrototipeUITestsLaunchTests.swift */,
 			);
 			path = FacialRecognitionPrototipeUITests;
+			sourceTree = "<group>";
+		};
+		A2331B792AE19714008120BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A20EAA892AE2D79D00792341 /* ARKit.framework */,
+				A2331B7E2AE19723008120BD /* CoreML.framework */,
+				A2331B7C2AE1971B008120BD /* AVFoundation.framework */,
+				A2331B7A2AE19715008120BD /* Vision.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A20EAA8C2AE2E4B100792341 /* CNNEmotions.mlmodel in Sources */,
 				A2331B4E2AE19676008120BD /* ViewController.swift in Sources */,
 				A2331B4A2AE19676008120BD /* AppDelegate.swift in Sources */,
 				A2331B4C2AE19676008120BD /* SceneDelegate.swift in Sources */,
@@ -450,6 +476,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,6 +505,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
