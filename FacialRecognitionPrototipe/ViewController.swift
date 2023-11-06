@@ -11,6 +11,15 @@ class ViewController: UIViewController {
 
     // MARK: VARIABLES
     
+    private var latLngLabel:UILabel = {
+        let label = UILabel()
+        label.backgroundColor = .systemFill
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.font = .systemFont(ofSize: 26)
+        return label
+    } ()
+    
     @IBOutlet var FacesCount: UILabel!
     
     // Create view data output var, used for the data we will be analyzing using Vision
@@ -38,6 +47,9 @@ class ViewController: UIViewController {
         
         // Start capturing from the camera
         captureSession.startRunning()
+        
+        latLngLabel.frame = CGRect(x: 20, y: view.bounds.height / 2 - 50, width: view.bounds.width - 40, height: 100)
+        view.addSubview(latLngLabel)
     }
     
     // Adjust when the frame is changed
