@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C96443D2AF1840E00CC7D3D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C96443C2AF1840E00CC7D3D /* CoreData.framework */; };
 		A20EAA8C2AE2E4B100792341 /* CNNEmotions.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A20EAA8B2AE2E4B100792341 /* CNNEmotions.mlmodel */; };
 		A2331B4A2AE19676008120BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2331B492AE19676008120BD /* AppDelegate.swift */; };
 		A2331B4C2AE19676008120BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2331B4B2AE19676008120BD /* SceneDelegate.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C96443C2AF1840E00CC7D3D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		A20EAA892AE2D79D00792341 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		A20EAA8B2AE2E4B100792341 /* CNNEmotions.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = CNNEmotions.mlmodel; path = ../../../Downloads/CNNEmotions.mlmodel; sourceTree = "<group>"; };
 		A2331B462AE19676008120BD /* FacialRecognitionPrototipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacialRecognitionPrototipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C96443D2AF1840E00CC7D3D /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +147,7 @@
 		A2331B792AE19714008120BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C96443C2AF1840E00CC7D3D /* CoreData.framework */,
 				A20EAA892AE2D79D00792341 /* ARKit.framework */,
 				A2331B7E2AE19723008120BD /* CoreML.framework */,
 				A2331B7C2AE1971B008120BD /* AVFoundation.framework */,
