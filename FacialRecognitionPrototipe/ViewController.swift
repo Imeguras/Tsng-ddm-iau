@@ -6,10 +6,14 @@
 import UIKit
 import Vision
 import AVFoundation
+import CoreLocation
+import CoreML
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
 
     // MARK: VARIABLES
+    
+    private var locationManager:CLLocationManager?
     
     private var latLngLabel:UILabel = {
         let label = UILabel()
@@ -33,7 +37,9 @@ class ViewController: UIViewController {
     private lazy var previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
     
     //The CoreML model we use for emotion classification.
-    private let model = try! VNCoreMLModel(for: CNNEmotions().model)
+    // private let model = try! VNCoreMLModel(for: CNNEmotions().model)
+    private let model = try! VNCoreMLModel(for: CNNEmotions(configuration: MLModelConfiguration()).model)
+
     
     // MARK: LIFECYCLE
     override func viewDidLoad() {
@@ -50,6 +56,18 @@ class ViewController: UIViewController {
         
         latLngLabel.frame = CGRect(x: 20, y: view.bounds.height / 2 - 50, width: view.bounds.width - 40, height: 100)
         view.addSubview(latLngLabel)
+        
+        locationManager = CLLocationManager()
+        locationManager?.requestAlwaysAuthorization()
+        locationManager?.startUpdatingLocation()
+        locationManager?.delegate = self
+        locationManager?.allowsBackgroundLocationUpdates = true
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            latLngLabel.text = "Lat: \(location.coordinate.latitude) \nLng: \(location.coordinate.longitude)"
+        }
     }
     
     // Adjust when the frame is changed
