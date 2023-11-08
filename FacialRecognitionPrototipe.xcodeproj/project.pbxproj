@@ -21,6 +21,9 @@
 		A2331B7B2AE19715008120BD /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2331B7A2AE19715008120BD /* Vision.framework */; };
 		A2331B7D2AE1971B008120BD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2331B7C2AE1971B008120BD /* AVFoundation.framework */; };
 		A2331B7F2AE19723008120BD /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2331B7E2AE19723008120BD /* CoreML.framework */; };
+		DE41B8B82AFABAD400499E46 /* GpsAndOdometryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE41B8B62AFABAD400499E46 /* GpsAndOdometryModel.xcdatamodeld */; };
+		DE41B8B92AFABAD400499E46 /* GpsAndOdometryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE41B8B62AFABAD400499E46 /* GpsAndOdometryModel.xcdatamodeld */; };
+		DE7DAC8A2AFBF3450046DA2D /* PersistantContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7DAC892AFBF3450046DA2D /* PersistantContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,8 @@
 		A2331B7A2AE19715008120BD /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
 		A2331B7C2AE1971B008120BD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A2331B7E2AE19723008120BD /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
+		DE41B8B72AFABAD400499E46 /* GpsAndOdometryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GpsAndOdometryModel.xcdatamodel; sourceTree = "<group>"; };
+		DE7DAC892AFBF3450046DA2D /* PersistantContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistantContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +128,8 @@
 				A2331B542AE19679008120BD /* LaunchScreen.storyboard */,
 				A2331B572AE19679008120BD /* Info.plist */,
 				A20EAA8B2AE2E4B100792341 /* CNNEmotions.mlmodel */,
+				DE41B8B62AFABAD400499E46 /* GpsAndOdometryModel.xcdatamodeld */,
+				DE7DAC892AFBF3450046DA2D /* PersistantContainer.swift */,
 			);
 			path = FacialRecognitionPrototipe;
 			sourceTree = "<group>";
@@ -287,7 +294,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE7DAC8A2AFBF3450046DA2D /* PersistantContainer.swift in Sources */,
 				A20EAA8C2AE2E4B100792341 /* CNNEmotions.mlmodel in Sources */,
+				DE41B8B82AFABAD400499E46 /* GpsAndOdometryModel.xcdatamodeld in Sources */,
 				A2331B4E2AE19676008120BD /* ViewController.swift in Sources */,
 				A2331B4A2AE19676008120BD /* AppDelegate.swift in Sources */,
 				A2331B4C2AE19676008120BD /* SceneDelegate.swift in Sources */,
@@ -298,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE41B8B92AFABAD400499E46 /* GpsAndOdometryModel.xcdatamodeld in Sources */,
 				A2331B612AE1967A008120BD /* FacialRecognitionPrototipeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,6 +649,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DE41B8B62AFABAD400499E46 /* GpsAndOdometryModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DE41B8B72AFABAD400499E46 /* GpsAndOdometryModel.xcdatamodel */,
+			);
+			currentVersion = DE41B8B72AFABAD400499E46 /* GpsAndOdometryModel.xcdatamodel */;
+			path = GpsAndOdometryModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A2331B3E2AE19676008120BD /* Project object */;
 }

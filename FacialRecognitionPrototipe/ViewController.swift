@@ -8,7 +8,8 @@ import Vision
 import AVFoundation
 
 class ViewController: UIViewController {
-
+    var container: NSPersistentContainer!
+    
     // MARK: VARIABLES
     
     @IBOutlet var FacesCount: UILabel!
@@ -26,9 +27,24 @@ class ViewController: UIViewController {
     //The CoreML model we use for emotion classification.
     private let model = try! VNCoreMLModel(for: CNNEmotions().model)
     
+    
+   //THIS SHOULD BE IN EVERY CONTROLLER
+   /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       if let nextVC = segue.destination as? NextViewController {
+           nextVC.container = container
+       }
+   }*/
+   
     // MARK: LIFECYCLE
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard container != nil else {
+            fatalError("This view needs a persistent container.")
+        
+        // The persistent
+        }
+
         // Do any additional setup after loading the view
         
         addCameraInput()
