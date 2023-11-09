@@ -6,6 +6,7 @@
 import UIKit
 import Vision
 import AVFoundation
+import CoreData
 
 class ViewController: UIViewController {
     var container: NSPersistentContainer!
