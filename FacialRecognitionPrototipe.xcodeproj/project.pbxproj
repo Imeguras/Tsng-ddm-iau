@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C409D0F2AFD64CD00EA6314 /* CNNEmotions.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2C409D0E2AFD64CC00EA6314 /* CNNEmotions.mlmodel */; };
+		2C409D102AFD64CD00EA6314 /* CNNEmotions.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2C409D0E2AFD64CC00EA6314 /* CNNEmotions.mlmodel */; };
+		2C409D112AFD64CD00EA6314 /* CNNEmotions.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2C409D0E2AFD64CC00EA6314 /* CNNEmotions.mlmodel */; };
 		2C96443D2AF1840E00CC7D3D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C96443C2AF1840E00CC7D3D /* CoreData.framework */; };
-		A20EAA8C2AE2E4B100792341 /* CNNEmotions.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A20EAA8B2AE2E4B100792341 /* CNNEmotions.mlmodel */; };
 		A2331B4A2AE19676008120BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2331B492AE19676008120BD /* AppDelegate.swift */; };
 		A2331B4C2AE19676008120BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2331B4B2AE19676008120BD /* SceneDelegate.swift */; };
 		A2331B4E2AE19676008120BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2331B4D2AE19676008120BD /* ViewController.swift */; };
@@ -41,9 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C409D0E2AFD64CC00EA6314 /* CNNEmotions.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = CNNEmotions.mlmodel; path = ../../../Downloads/CNNEmotions.mlmodel; sourceTree = "<group>"; };
 		2C96443C2AF1840E00CC7D3D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		A20EAA892AE2D79D00792341 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
-		A20EAA8B2AE2E4B100792341 /* CNNEmotions.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = CNNEmotions.mlmodel; path = ../../../Downloads/CNNEmotions.mlmodel; sourceTree = "<group>"; };
 		A2331B462AE19676008120BD /* FacialRecognitionPrototipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacialRecognitionPrototipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2331B492AE19676008120BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2331B4B2AE19676008120BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,8 +123,8 @@
 				A2331B4F2AE19676008120BD /* Main.storyboard */,
 				A2331B522AE19679008120BD /* Assets.xcassets */,
 				A2331B542AE19679008120BD /* LaunchScreen.storyboard */,
+				2C409D0E2AFD64CC00EA6314 /* CNNEmotions.mlmodel */,
 				A2331B572AE19679008120BD /* Info.plist */,
-				A20EAA8B2AE2E4B100792341 /* CNNEmotions.mlmodel */,
 			);
 			path = FacialRecognitionPrototipe;
 			sourceTree = "<group>";
@@ -287,7 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A20EAA8C2AE2E4B100792341 /* CNNEmotions.mlmodel in Sources */,
+				2C409D0F2AFD64CD00EA6314 /* CNNEmotions.mlmodel in Sources */,
 				A2331B4E2AE19676008120BD /* ViewController.swift in Sources */,
 				A2331B4A2AE19676008120BD /* AppDelegate.swift in Sources */,
 				A2331B4C2AE19676008120BD /* SceneDelegate.swift in Sources */,
@@ -298,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C409D102AFD64CD00EA6314 /* CNNEmotions.mlmodel in Sources */,
 				A2331B612AE1967A008120BD /* FacialRecognitionPrototipeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C409D112AFD64CD00EA6314 /* CNNEmotions.mlmodel in Sources */,
 				A2331B6B2AE1967A008120BD /* FacialRecognitionPrototipeUITests.swift in Sources */,
 				A2331B6D2AE1967A008120BD /* FacialRecognitionPrototipeUITestsLaunchTests.swift in Sources */,
 			);
@@ -472,7 +476,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5424RY64YN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FacialRecognitionPrototipe/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -483,7 +487,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -504,7 +508,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5424RY64YN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FacialRecognitionPrototipe/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -515,7 +519,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
