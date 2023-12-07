@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C2BEA682B2228B60014A418 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BEA662B2228B60014A418 /* Model.xcdatamodeld */; };
+		2C2BEA712B22374D0014A418 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BEA6F2B22374D0014A418 /* Location+CoreDataClass.swift */; };
+		2C2BEA722B22374D0014A418 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BEA702B22374D0014A418 /* Location+CoreDataProperties.swift */; };
 		2C409D0F2AFD64CD00EA6314 /* CNNEmotions.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2C409D0E2AFD64CC00EA6314 /* CNNEmotions.mlmodel */; };
 		2C409D102AFD64CD00EA6314 /* CNNEmotions.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2C409D0E2AFD64CC00EA6314 /* CNNEmotions.mlmodel */; };
 		2C409D112AFD64CD00EA6314 /* CNNEmotions.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2C409D0E2AFD64CC00EA6314 /* CNNEmotions.mlmodel */; };
@@ -43,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C2BEA672B2228B60014A418 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		2C2BEA6F2B22374D0014A418 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2C2BEA702B22374D0014A418 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2C409D0E2AFD64CC00EA6314 /* CNNEmotions.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = CNNEmotions.mlmodel; path = ../../../Downloads/CNNEmotions.mlmodel; sourceTree = "<group>"; };
 		2C96443C2AF1840E00CC7D3D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		A20EAA892AE2D79D00792341 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
@@ -93,9 +99,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C2992132B21057E00ADF795 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A2331B3D2AE19676008120BD = {
 			isa = PBXGroup;
 			children = (
+				2C2BEA6F2B22374D0014A418 /* Location+CoreDataClass.swift */,
+				2C2BEA702B22374D0014A418 /* Location+CoreDataProperties.swift */,
 				A2331B482AE19676008120BD /* FacialRecognitionPrototipe */,
 				A2331B5F2AE1967A008120BD /* FacialRecognitionPrototipeTests */,
 				A2331B692AE1967A008120BD /* FacialRecognitionPrototipeUITests */,
@@ -117,6 +132,7 @@
 		A2331B482AE19676008120BD /* FacialRecognitionPrototipe */ = {
 			isa = PBXGroup;
 			children = (
+				2C2992132B21057E00ADF795 /* Model */,
 				A2331B492AE19676008120BD /* AppDelegate.swift */,
 				A2331B4B2AE19676008120BD /* SceneDelegate.swift */,
 				A2331B4D2AE19676008120BD /* ViewController.swift */,
@@ -125,6 +141,7 @@
 				A2331B542AE19679008120BD /* LaunchScreen.storyboard */,
 				2C409D0E2AFD64CC00EA6314 /* CNNEmotions.mlmodel */,
 				A2331B572AE19679008120BD /* Info.plist */,
+				2C2BEA662B2228B60014A418 /* Model.xcdatamodeld */,
 			);
 			path = FacialRecognitionPrototipe;
 			sourceTree = "<group>";
@@ -289,8 +306,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2BEA712B22374D0014A418 /* Location+CoreDataClass.swift in Sources */,
+				2C2BEA722B22374D0014A418 /* Location+CoreDataProperties.swift in Sources */,
 				2C409D0F2AFD64CD00EA6314 /* CNNEmotions.mlmodel in Sources */,
 				A2331B4E2AE19676008120BD /* ViewController.swift in Sources */,
+				2C2BEA682B2228B60014A418 /* Model.xcdatamodeld in Sources */,
 				A2331B4A2AE19676008120BD /* AppDelegate.swift in Sources */,
 				A2331B4C2AE19676008120BD /* SceneDelegate.swift in Sources */,
 			);
@@ -649,6 +669,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2C2BEA662B2228B60014A418 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2C2BEA672B2228B60014A418 /* Model.xcdatamodel */,
+			);
+			currentVersion = 2C2BEA672B2228B60014A418 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A2331B3E2AE19676008120BD /* Project object */;
 }

@@ -8,10 +8,27 @@ import Vision
 import AVFoundation
 import CoreLocation
 import CoreML
+import CoreData
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
     // MARK: VARIABLES
+    
+    // Store
+    // Reference to managed object context
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    var managedObjectContext: NSManagedObjectContext {
+        return context
+    }
+    
+    var items:[Location]?
+    
+    //var managedObjectContext: NSManagedObjectContext? {
+      //  let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        //return appDelegate?.persistentContainer.viewContext
+   // }
+    // Store
     
     private var locationManager:CLLocationManager?
     
@@ -62,11 +79,44 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager?.startUpdatingLocation()
         locationManager?.delegate = self
         locationManager?.allowsBackgroundLocationUpdates = true
+        
+        // tableView.dataSource = self
+        // tableView.delegate = self
+        
+        // Get items from Core Data
+        fetchCoordinates()
+    }
+    
+    func fetchCoordinates() {
+        // Fetch the data from Core Data
+        do {
+            self.items = try context.fetch(Location.fetchRequest())
+            
+            //DispatchQueue.main.async {
+              //  self.tableView.reloadData()
+            //}
+        }
+        catch {
+            print("Error fetching coordinates from Core Data: (error)")
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
             /*latLngLabel.text =  "Lat: \(location.coordinate.latitude) \nLng: \(location.coordinate.longitude)"*/
+            
+            // Criar uma instância da entidade Location
+            let newLocation = Location(context: managedObjectContext)
+            newLocation.latitude = location.coordinate.latitude
+            newLocation.longitude = location.coordinate.longitude
+
+             // Salvar a instância no Core Data
+            do {
+                try managedObjectContext.save()
+                print("Localização guardada no Core Data")
+            } catch {
+                print("Erro ao salvar a localização no Core Data: (error)")
+            }
         }
     }
     
