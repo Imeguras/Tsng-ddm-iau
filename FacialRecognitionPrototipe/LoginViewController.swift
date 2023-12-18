@@ -26,6 +26,11 @@ class LoginViewController: UIViewController {
         if let accessToken = AuthManager.shared.accessToken {
             // User is logged in
             print("User is logged in with token: \(accessToken)")
+            
+            DispatchQueue.main.async {
+                let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "firstViewController") as! ViewController
+                self.navigationController?.pushViewController(storyboard, animated: true)
+            }
 
         } else {
             // User is not logged in
@@ -53,6 +58,22 @@ class LoginViewController: UIViewController {
                     // Print the HTTP response status code for debugging
                     if let httpResponse = response as? HTTPURLResponse {
                         print("HTTP Response Status Code: \(httpResponse.statusCode)")
+                        
+                        if (200...299).contains(httpResponse.statusCode) {
+                            DispatchQueue.main.async {
+                                //self.performSegue(withIdentifier: "ViewController", sender: self)
+                                let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "firstViewController") as! ViewController
+                                self.navigationController?.pushViewController(storyboard, animated: true)
+                            }
+                        }
+                        else {
+                            self.showAlert(title: "Authentication Error", message: "Invalid email or password.")
+                            
+                            // Update UI or perform any other actions as needed
+                            DispatchQueue.main.async {
+                                self.passwordTextField.text = ""
+                            }
+                        }
                     }
 
                     // Check for a successful response
@@ -100,6 +121,15 @@ class LoginViewController: UIViewController {
                 task.resume()
         // token
         
+    }
+    
+    // Function to show an alert
+    private func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
         

@@ -15,9 +15,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let storyboard = UIStoryboard(name: "Main", bundle: nil) // Replace "Main" with the name of your storyboard
+
+        if let accessToken = UserDefaults.standard.string(forKey: "accessToken") {
+            // User logged in
+            AuthManager.shared.accessToken = accessToken
+            print("User logado")
+
+            DispatchQueue.main.async {
+                let viewController = storyboard.instantiateViewController(withIdentifier: "firstViewController") as! ViewController
+                if let navigationController = self.window?.rootViewController as? UINavigationController {
+                    navigationController.pushViewController(viewController, animated: true)
+                }
+            }
+        } else {
+            // User is not logged in
+            print("User não logado")
+            DispatchQueue.main.async {
+                let loginViewController = storyboard.instantiateViewController(withIdentifier: "loginViewController") as! LoginViewController
+                if let navigationController = self.window?.rootViewController as? UINavigationController {
+                    navigationController.pushViewController(loginViewController, animated: true)
+                }
+            }
+        }
+
         return true
     }
+
 
     // MARK: UISceneSession Lifecycle
 
