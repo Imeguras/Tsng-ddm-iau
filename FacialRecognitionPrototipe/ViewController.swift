@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import SwiftUI
 import Vision
 import AVFoundation
 import CoreLocation
@@ -63,10 +64,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view
         
-        addCameraInput()
-        showCameraFeed()
+        //addCameraInput()
+        //showCameraFeed()
         
-        getCameraFrames()
+        //getCameraFrames()
         
         // Start capturing from the camera
         captureSession.startRunning()
@@ -85,6 +86,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         // Get items from Core Data
         fetchCoordinates()
+        
+        //login()
     }
     
     func fetchCoordinates() {
@@ -130,7 +133,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     // MARK: HELPER FUNCTIONS
     
     // Add camera input from the user's front camera
-    private func addCameraInput() {
+    /*private func addCameraInput() {
         
         guard let device = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInTrueDepthCamera, .builtInDualCamera, .builtInWideAngleCamera], mediaType: .video, position: .front).devices.first else {
                 fatalError("No camera detected. Please use a real camera.")
@@ -162,7 +165,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
         
         connection.videoOrientation = .portrait
-    }
+    }*/
     
     private func detectFade(image: CVPixelBuffer) {
         // This is where we are going to detect a face and place a box around it
