@@ -90,6 +90,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         //login()
     }
     
+    // Ao clicar no botão Logout
+    @IBAction func logout(_ sender: UIButton) {
+        // Clear the access token when the user logs out
+            AuthManager.shared.clearAccessToken()
+        
+            print("User deu logout")
+
+            // Navigate to the login screen
+            self.navigationController?.popToRootViewController(animated: true)
+
+    }
+    
     func fetchCoordinates() {
         // Fetch the data from Core Data
         do {

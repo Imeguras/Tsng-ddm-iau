@@ -21,6 +21,16 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         passwordTextField.isSecureTextEntry = true
+        
+        // Check if the user is already logged in
+        if let accessToken = AuthManager.shared.accessToken {
+            // User is logged in
+            print("User is logged in with token: \(accessToken)")
+
+        } else {
+            // User is not logged in
+            print("User is not logged in")
+        }
     }
     
     @IBAction func loginClicked(_ sender: UIButton) {
@@ -67,6 +77,9 @@ class LoginViewController: UIViewController {
                     do {
                         // Parse JSON response
                         let json = try JSONSerialization.jsonObject(with: data) as! [String: Any]
+                        
+                        //Save the access token using AuthManager
+                        AuthManager.shared.saveAccessToken(fromJson: json)
 
                         // Assuming your access token is stored in the 'access_token' key
                         if let accessToken = json["access_token"] as? String {
@@ -75,6 +88,7 @@ class LoginViewController: UIViewController {
                             print("Access Token: \(accessToken)")
 
                             // Now you can proceed to handle the successful login
+                            
                         } else {
                             print("Access token not found in the response")
                         }

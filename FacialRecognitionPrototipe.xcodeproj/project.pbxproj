@@ -15,6 +15,7 @@
 		2C409D112AFD64CD00EA6314 /* CNNEmotions.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2C409D0E2AFD64CC00EA6314 /* CNNEmotions.mlmodel */; };
 		2C96443D2AF1840E00CC7D3D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C96443C2AF1840E00CC7D3D /* CoreData.framework */; };
 		2CA0BFCD2B2CCF27002CFE9F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0BFCC2B2CCF27002CFE9F /* LoginViewController.swift */; };
+		2CDA7D8C2B307E26000A6F95 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA7D8B2B307E26000A6F95 /* AuthManager.swift */; };
 		A2331B4A2AE19676008120BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2331B492AE19676008120BD /* AppDelegate.swift */; };
 		A2331B4C2AE19676008120BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2331B4B2AE19676008120BD /* SceneDelegate.swift */; };
 		A2331B4E2AE19676008120BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2331B4D2AE19676008120BD /* ViewController.swift */; };
@@ -53,6 +54,7 @@
 		2C409D0E2AFD64CC00EA6314 /* CNNEmotions.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = CNNEmotions.mlmodel; path = ../../../Downloads/CNNEmotions.mlmodel; sourceTree = "<group>"; };
 		2C96443C2AF1840E00CC7D3D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		2CA0BFCC2B2CCF27002CFE9F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2CDA7D8B2B307E26000A6F95 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		A20EAA892AE2D79D00792341 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		A2331B462AE19676008120BD /* FacialRecognitionPrototipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacialRecognitionPrototipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2331B492AE19676008120BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				2C409D0E2AFD64CC00EA6314 /* CNNEmotions.mlmodel */,
 				A2331B572AE19679008120BD /* Info.plist */,
 				2C2BEA662B2228B60014A418 /* Model.xcdatamodeld */,
+				2CDA7D8B2B307E26000A6F95 /* AuthManager.swift */,
 			);
 			path = FacialRecognitionPrototipe;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C2BEA712B22374D0014A418 /* Location+CoreDataClass.swift in Sources */,
+				2CDA7D8C2B307E26000A6F95 /* AuthManager.swift in Sources */,
 				2C2BEA722B22374D0014A418 /* Location+CoreDataProperties.swift in Sources */,
 				2C409D0F2AFD64CD00EA6314 /* CNNEmotions.mlmodel in Sources */,
 				A2331B4E2AE19676008120BD /* ViewController.swift in Sources */,
