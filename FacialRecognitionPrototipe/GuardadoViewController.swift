@@ -19,11 +19,9 @@ class GuardadoViewController: UIViewController, UITableViewDelegate, UITableView
         
         let sheet = UIAlertController(title: nil, message: nil , preferredStyle: .actionSheet)
         
-        let temporaryItem = SavedListItem(context: context)
-        
         sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         sheet.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: {_ in
-            self.deleteItem(itemIndex: indexPath.row)
+            self.deleteItem(indexPath: indexPath)
         }))
         
         present(sheet, animated: true)
@@ -61,6 +59,15 @@ class GuardadoViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let model = models[indexPath.row]
+        
+        let story = UIStoryboard(name: "Main", bundle: nil)
+        //newScreen.modalPresentationStyle = .fullScreen
+        let controller = story.instantiateViewController(identifier: "TableElementViewController") as! TableElementViewController
+        self.present(controller, animated: true, completion: nil)
+        
+        controller.changeTitle(listElement: model)
     }
     
     func getAllListItems() -> [SavedListItem] {
@@ -94,36 +101,16 @@ class GuardadoViewController: UIViewController, UITableViewDelegate, UITableView
         saveListItem()
     }
 
-    func deleteItem(itemIndex: Int) {
-        /*print("Antes: ", models.count)
-        self.ListTableView.beginUpdates()
-        context.delete(models[itemIndex])
-        models.remove(at: itemIndex)
-        self.ListTableView.deleteRows(at: [IndexPath(row: itemIndex, section: 0)], with: .left)
-        self.ListTableView.endUpdates()
-        
+    func deleteItem(indexPath: IndexPath) {
         do {
-            try context.save()
-            print(print("Depois: ", models.count))
-            print("getAllListItems().count: ", getAllListItems().count)
-        }
-        catch {
-            print(error.localizedDescription)
-        }*/
-        
-        do {
-            let deletedItem = models[itemIndex]
-            models.remove(at: itemIndex)
+            let deletedItem = models[indexPath.row]
             context.delete(deletedItem)
-            
+            models.remove(at: indexPath.row)
             try context.save()
-            DispatchQueue.main.async {
-                self.ListTableView.reloadData()
-                self.ListTableView.layoutSubviews()
-            }
-        }
+        } 
         catch {
         }
+        self.ListTableView.deleteRows(at:[indexPath], with:.fade)
     }
     
     func saveListItem() {
