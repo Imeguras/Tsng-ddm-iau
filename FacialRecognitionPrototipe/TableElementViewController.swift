@@ -1,6 +1,6 @@
 import UIKit
 
-class TableElementViewController: UIViewController {
+class TableElementViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var elementTitle: UILabel!
     
@@ -13,5 +13,13 @@ class TableElementViewController: UIViewController {
     func changeTitle(listElement: SavedListItem){
         elementTitle.text = listElement.listName ?? "<no-name>"
         placesAmount.text = String(listElement.locationNumber)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
     }
 }
