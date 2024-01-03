@@ -33,6 +33,7 @@
 		A268B2752B166F7E001A6443 /* NavSenseDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A268B2732B166F7E001A6443 /* NavSenseDataModel.xcdatamodeld */; };
 		A28A0CFB2B28CAB500F3D97B /* EditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28A0CF92B28CAB500F3D97B /* EditTableViewCell.swift */; };
 		A28A0CFC2B28CAB500F3D97B /* EditTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28A0CFA2B28CAB500F3D97B /* EditTableViewCell.xib */; };
+		A2FDD82C2B45A4D30059C612 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FDD82B2B45A4D30059C612 /* LocationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		A268B2742B166F7E001A6443 /* NavSenseDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NavSenseDataModel.xcdatamodel; sourceTree = "<group>"; };
 		A28A0CF92B28CAB500F3D97B /* EditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTableViewCell.swift; sourceTree = "<group>"; };
 		A28A0CFA2B28CAB500F3D97B /* EditTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditTableViewCell.xib; sourceTree = "<group>"; };
+		A2FDD82B2B45A4D30059C612 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,24 +141,20 @@
 		A2331B482AE19676008120BD /* FacialRecognitionPrototipe */ = {
 			isa = PBXGroup;
 			children = (
+				A2A13C142B45CDA200EAC733 /* TableViewCell */,
+				A2F4F7F52B45A2DD004CEAA7 /* Services */,
 				A28090982B1A549C00A5E885 /* Assets */,
-				A2F8D0672B18F04D00D73300 /* LocationsList */,
+				A2F8D0672B18F04D00D73300 /* DataModel */,
 				A2331B492AE19676008120BD /* AppDelegate.swift */,
 				A2331B4B2AE19676008120BD /* SceneDelegate.swift */,
 				A2331B4D2AE19676008120BD /* MapaViewController.swift */,
 				A24DB5882B19602100930405 /* GuardadoViewController.swift */,
 				A2331B4F2AE19676008120BD /* Main.storyboard */,
-				A2331B522AE19679008120BD /* Assets.xcassets */,
 				A2331B542AE19679008120BD /* LaunchScreen.storyboard */,
 				A2331B572AE19679008120BD /* Info.plist */,
 				A20EAA8B2AE2E4B100792341 /* CNNEmotions.mlmodel */,
 				A265DF3E2B05149B003BF504 /* SwiftUIView.swift */,
-				A268B2732B166F7E001A6443 /* NavSenseDataModel.xcdatamodeld */,
-				A28A0CF92B28CAB500F3D97B /* EditTableViewCell.swift */,
-				A28A0CFA2B28CAB500F3D97B /* EditTableViewCell.xib */,
 				A23303852B3DFFE40072C34C /* TableElementViewController.swift */,
-				A206ADF52B44C1F90027E629 /* LocationsTableViewCell.swift */,
-				A206ADF62B44C1F90027E629 /* LocationsTableViewCell.xib */,
 			);
 			path = FacialRecognitionPrototipe;
 			sourceTree = "<group>";
@@ -193,19 +191,40 @@
 		A28090982B1A549C00A5E885 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A2331B522AE19679008120BD /* Assets.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		A2F8D0672B18F04D00D73300 /* LocationsList */ = {
+		A2A13C142B45CDA200EAC733 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A206ADF52B44C1F90027E629 /* LocationsTableViewCell.swift */,
+				A206ADF62B44C1F90027E629 /* LocationsTableViewCell.xib */,
+				A28A0CF92B28CAB500F3D97B /* EditTableViewCell.swift */,
+				A28A0CFA2B28CAB500F3D97B /* EditTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		A2F4F7F52B45A2DD004CEAA7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A2FDD82B2B45A4D30059C612 /* LocationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A2F8D0672B18F04D00D73300 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
 				A206ADFD2B44DE370027E629 /* LocationList+CoreDataClass.swift */,
 				A206ADFE2B44DE370027E629 /* LocationList+CoreDataProperties.swift */,
 				A25AD5C42B18F5C00026EF1C /* SavedListItem+CoreDataClass.swift */,
 				A25AD5C52B18F5C00026EF1C /* SavedListItem+CoreDataProperties.swift */,
+				A268B2732B166F7E001A6443 /* NavSenseDataModel.xcdatamodeld */,
 			);
-			path = LocationsList;
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +367,7 @@
 				A2331B4A2AE19676008120BD /* AppDelegate.swift in Sources */,
 				A24DB5892B19602100930405 /* GuardadoViewController.swift in Sources */,
 				A25AD5C72B18F5C00026EF1C /* SavedListItem+CoreDataProperties.swift in Sources */,
+				A2FDD82C2B45A4D30059C612 /* LocationService.swift in Sources */,
 				A206ADFF2B44DE370027E629 /* LocationList+CoreDataClass.swift in Sources */,
 				A2331B4C2AE19676008120BD /* SceneDelegate.swift in Sources */,
 				A265DF3F2B05149B003BF504 /* SwiftUIView.swift in Sources */,

@@ -6,6 +6,7 @@
 import UIKit
 import Vision
 import AVFoundation
+import SwiftUI
 
 class ViewController: UIViewController {
 
@@ -21,6 +22,9 @@ class ViewController: UIViewController {
     
     @IBOutlet var BottomNav: UIView!
     
+    @IBSegueAction func embedSwiftUIView(_ coder: NSCoder) -> UIViewController? {
+        return UIHostingController(coder: coder, rootView: SwiftUIView())
+    }
     // Create view data output var, used for the data we will be analyzing using Vision
     private let videoDataOutput = AVCaptureVideoDataOutput()
     
@@ -127,11 +131,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view
-        
-        self.BottomNav.layer.cornerRadius = 30
-        self.BottomNav.clipsToBounds = true
-        
-        scrollViewDidScroll(ExploreScrollView)
         
         //addCameraInput()
         

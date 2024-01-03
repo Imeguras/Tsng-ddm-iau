@@ -104,7 +104,6 @@ class GuardadoViewController: UIViewController, UITableViewDelegate, UITableView
         let story = UIStoryboard(name: "Main", bundle: nil)
         
         let controller = story.instantiateViewController(identifier: "TableElementViewController") as! TableElementViewController
-        //controller.modalPresentationStyle = .fullScreen
         self.present(controller, animated: true, completion: nil)
         
         controller.changeDetails(listElement: model)
