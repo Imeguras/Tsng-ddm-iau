@@ -11,6 +11,7 @@
 		A206ADF82B44C1F90027E629 /* LocationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A206ADF62B44C1F90027E629 /* LocationsTableViewCell.xib */; };
 		A206ADFF2B44DE370027E629 /* LocationList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A206ADFD2B44DE370027E629 /* LocationList+CoreDataClass.swift */; };
 		A206AE002B44DE370027E629 /* LocationList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A206ADFE2B44DE370027E629 /* LocationList+CoreDataProperties.swift */; };
+		2C96443D2AF1840E00CC7D3D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C96443C2AF1840E00CC7D3D /* CoreData.framework */; };
 		A20EAA8C2AE2E4B100792341 /* CNNEmotions.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A20EAA8B2AE2E4B100792341 /* CNNEmotions.mlmodel */; };
 		A23303862B3DFFE40072C34C /* TableElementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23303852B3DFFE40072C34C /* TableElementViewController.swift */; };
 		A2331B4A2AE19676008120BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2331B492AE19676008120BD /* AppDelegate.swift */; };
@@ -58,6 +59,7 @@
 		A206ADF62B44C1F90027E629 /* LocationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationsTableViewCell.xib; sourceTree = "<group>"; };
 		A206ADFD2B44DE370027E629 /* LocationList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationList+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A206ADFE2B44DE370027E629 /* LocationList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2C96443C2AF1840E00CC7D3D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		A20EAA892AE2D79D00792341 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		A20EAA8B2AE2E4B100792341 /* CNNEmotions.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = CNNEmotions.mlmodel; path = ../../../Downloads/CNNEmotions.mlmodel; sourceTree = "<group>"; };
 		A23303852B3DFFE40072C34C /* TableElementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableElementViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C96443D2AF1840E00CC7D3D /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
