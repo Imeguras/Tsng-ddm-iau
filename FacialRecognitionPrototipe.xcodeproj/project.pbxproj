@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A206ADF72B44C1F90027E629 /* LocationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A206ADF52B44C1F90027E629 /* LocationsTableViewCell.swift */; };
+		A206ADF82B44C1F90027E629 /* LocationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A206ADF62B44C1F90027E629 /* LocationsTableViewCell.xib */; };
+		A206ADFF2B44DE370027E629 /* LocationList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A206ADFD2B44DE370027E629 /* LocationList+CoreDataClass.swift */; };
+		A206AE002B44DE370027E629 /* LocationList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A206ADFE2B44DE370027E629 /* LocationList+CoreDataProperties.swift */; };
 		A20EAA8C2AE2E4B100792341 /* CNNEmotions.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A20EAA8B2AE2E4B100792341 /* CNNEmotions.mlmodel */; };
 		A23303862B3DFFE40072C34C /* TableElementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23303852B3DFFE40072C34C /* TableElementViewController.swift */; };
 		A2331B4A2AE19676008120BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2331B492AE19676008120BD /* AppDelegate.swift */; };
@@ -49,6 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A206ADF52B44C1F90027E629 /* LocationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsTableViewCell.swift; sourceTree = "<group>"; };
+		A206ADF62B44C1F90027E629 /* LocationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationsTableViewCell.xib; sourceTree = "<group>"; };
+		A206ADFD2B44DE370027E629 /* LocationList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A206ADFE2B44DE370027E629 /* LocationList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationList+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A20EAA892AE2D79D00792341 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		A20EAA8B2AE2E4B100792341 /* CNNEmotions.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = CNNEmotions.mlmodel; path = ../../../Downloads/CNNEmotions.mlmodel; sourceTree = "<group>"; };
 		A23303852B3DFFE40072C34C /* TableElementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableElementViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +155,8 @@
 				A28A0CF92B28CAB500F3D97B /* EditTableViewCell.swift */,
 				A28A0CFA2B28CAB500F3D97B /* EditTableViewCell.xib */,
 				A23303852B3DFFE40072C34C /* TableElementViewController.swift */,
+				A206ADF52B44C1F90027E629 /* LocationsTableViewCell.swift */,
+				A206ADF62B44C1F90027E629 /* LocationsTableViewCell.xib */,
 			);
 			path = FacialRecognitionPrototipe;
 			sourceTree = "<group>";
@@ -190,6 +200,8 @@
 		A2F8D0672B18F04D00D73300 /* LocationsList */ = {
 			isa = PBXGroup;
 			children = (
+				A206ADFD2B44DE370027E629 /* LocationList+CoreDataClass.swift */,
+				A206ADFE2B44DE370027E629 /* LocationList+CoreDataProperties.swift */,
 				A25AD5C42B18F5C00026EF1C /* SavedListItem+CoreDataClass.swift */,
 				A25AD5C52B18F5C00026EF1C /* SavedListItem+CoreDataProperties.swift */,
 			);
@@ -304,6 +316,7 @@
 				A2331B562AE19679008120BD /* LaunchScreen.storyboard in Resources */,
 				A2331B532AE19679008120BD /* Assets.xcassets in Resources */,
 				A2331B512AE19676008120BD /* Main.storyboard in Resources */,
+				A206ADF82B44C1F90027E629 /* LocationsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,14 +341,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A206AE002B44DE370027E629 /* LocationList+CoreDataProperties.swift in Sources */,
 				A268B2752B166F7E001A6443 /* NavSenseDataModel.xcdatamodeld in Sources */,
 				A20EAA8C2AE2E4B100792341 /* CNNEmotions.mlmodel in Sources */,
 				A2331B4E2AE19676008120BD /* MapaViewController.swift in Sources */,
 				A2331B4A2AE19676008120BD /* AppDelegate.swift in Sources */,
 				A24DB5892B19602100930405 /* GuardadoViewController.swift in Sources */,
 				A25AD5C72B18F5C00026EF1C /* SavedListItem+CoreDataProperties.swift in Sources */,
+				A206ADFF2B44DE370027E629 /* LocationList+CoreDataClass.swift in Sources */,
 				A2331B4C2AE19676008120BD /* SceneDelegate.swift in Sources */,
 				A265DF3F2B05149B003BF504 /* SwiftUIView.swift in Sources */,
+				A206ADF72B44C1F90027E629 /* LocationsTableViewCell.swift in Sources */,
 				A23303862B3DFFE40072C34C /* TableElementViewController.swift in Sources */,
 				A28A0CFB2B28CAB500F3D97B /* EditTableViewCell.swift in Sources */,
 				A25AD5C62B18F5C00026EF1C /* SavedListItem+CoreDataClass.swift in Sources */,
