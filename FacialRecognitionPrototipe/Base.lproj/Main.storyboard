@@ -24,13 +24,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Faces count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FX8-5o-lFn">
-                                <rect key="frame" x="16" y="818" width="361" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="29"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Emotion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31n-21-5fV">
                                 <rect key="frame" x="16" y="721" width="361" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -45,6 +38,15 @@
                                     <segue destination="KxM-hs-hQJ" kind="embed" destinationCreationSelector="embedSwiftUIView:" id="aSK-aD-jQH"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CeY-1X-w6E">
+                                <rect key="frame" x="159" y="225" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="addNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IIu-p2-hWi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
@@ -54,7 +56,6 @@
                     <navigationItem key="navigationItem" id="uF2-hN-3QI"/>
                     <size key="freeformSize" width="393" height="852"/>
                     <connections>
-                        <outlet property="FacesCount" destination="FX8-5o-lFn" id="bR2-bZ-iF4"/>
                         <outlet property="UserEmotion" destination="31n-21-5fV" id="Agq-HU-tu6"/>
                     </connections>
                 </viewController>
@@ -208,8 +209,8 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwt-iH-Hib">
-                                <rect key="frame" x="50" y="153" width="97" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwt-iH-Hib">
+                                <rect key="frame" x="273" y="35" width="97" height="31"/>
                                 <color key="tintColor" red="0.79980072380444156" green="0.8961099483670657" blue="0.96611279249191284" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="+ Adicionar">
@@ -269,6 +270,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="DPt-AZ-ebc">
+                                <rect key="frame" x="0.0" y="143" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="sl2-ni-Ums" id="XKr-KR-EJQ"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8RM-mY-Ca0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -278,12 +286,15 @@
                             <constraint firstItem="1dp-KO-i5l" firstAttribute="top" secondItem="gwt-iH-Hib" secondAttribute="bottom" id="A9F-z6-pBj"/>
                             <constraint firstItem="gwt-iH-Hib" firstAttribute="leading" secondItem="8RM-mY-Ca0" secondAttribute="leading" constant="50" id="AIx-kd-IdO"/>
                             <constraint firstItem="V78-XD-Y4f" firstAttribute="top" secondItem="1ss-Cp-pO8" secondAttribute="bottom" constant="3" id="HFo-C0-lJ3"/>
+                            <constraint firstItem="DPt-AZ-ebc" firstAttribute="trailing" secondItem="8RM-mY-Ca0" secondAttribute="trailing" id="U9g-bk-nzU"/>
                             <constraint firstItem="V78-XD-Y4f" firstAttribute="leading" secondItem="Bjr-ge-nae" secondAttribute="trailing" constant="3" id="YET-mo-g4O"/>
                             <constraint firstItem="eqv-cB-Frs" firstAttribute="top" secondItem="1dp-KO-i5l" secondAttribute="bottom" constant="12" id="YOt-0f-35x"/>
+                            <constraint firstItem="DPt-AZ-ebc" firstAttribute="leading" secondItem="8RM-mY-Ca0" secondAttribute="leading" id="YPE-fV-xYJ"/>
                             <constraint firstItem="1ss-Cp-pO8" firstAttribute="top" secondItem="8RM-mY-Ca0" secondAttribute="top" constant="25" id="beT-2k-e9x"/>
                             <constraint firstItem="V78-XD-Y4f" firstAttribute="centerX" secondItem="ghb-qq-Gf6" secondAttribute="centerX" id="bqX-h2-SWs"/>
                             <constraint firstItem="eqv-cB-Frs" firstAttribute="leading" secondItem="8RM-mY-Ca0" secondAttribute="leading" constant="30" id="css-rs-elu"/>
                             <constraint firstItem="Bjr-ge-nae" firstAttribute="top" secondItem="1ss-Cp-pO8" secondAttribute="bottom" constant="3" id="dvJ-Fx-c2f"/>
+                            <constraint firstItem="DPt-AZ-ebc" firstAttribute="top" secondItem="1ss-Cp-pO8" secondAttribute="bottom" constant="30" id="twk-qs-36G"/>
                             <constraint firstItem="1dp-KO-i5l" firstAttribute="centerX" secondItem="ghb-qq-Gf6" secondAttribute="centerX" id="u1L-wL-k3f"/>
                         </constraints>
                     </view>

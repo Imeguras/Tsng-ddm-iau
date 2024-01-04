@@ -1,4 +1,8 @@
 import UIKit
+import MapKit
+// MARK: Combine framework to watch textfield change
+import Combine
+import CoreLocation
 
 class TableElementViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -7,6 +11,11 @@ class TableElementViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var placesAmount: UILabel!
     
     @IBOutlet weak var LocationsTableView: UITableView!
+    
+    var cancellable: AnyCancellable?
+    
+    var searchText: String = ""
+    var fetchedPlaces: [CLPlacemark]?
     
     var listReference = SavedListItem()
     
@@ -112,6 +121,32 @@ class TableElementViewController: UIViewController, UITableViewDelegate, UITable
         
         listReference.locationNumber = Int32(places)
         placesAmount.text = String(places)
+    }
+    
+    func fetchPlaces (value: String){
+        // MARK: Fetching places using MKLocalSearch and Asyc/Await
+        Task {
+            do {
+                let request = MKLocalSearch.Request()
+                request.naturalLanguageQuery = value.lowercased()
+                
+                let response = try await MKLocalSearch(request: request).start()
+                
+                await MainActor.run(body: {
+                    self.fetchedPlaces = response.mapItems.compactMap({ item -> CLPlacemark? in
+                        return item.placemark
+                        
+                    })
+                })
+            }
+            catch {
+                // HANDLE ERROR
+            }
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Bool){
+        // HANDLE ERROR
     }
     
     override func viewDidLoad() {

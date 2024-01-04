@@ -5,15 +5,13 @@
 
 import UIKit
 import Vision
+import UserNotificationsUI
 import AVFoundation
 import SwiftUI
 
 class ViewController: UIViewController {
 
     // MARK: VARIABLES
-    
-    @IBOutlet var FacesCount: UILabel!
-    
     @IBOutlet var UserEmotion: UILabel!
     
     @IBOutlet var ExploreScrollView: UIScrollView!
@@ -21,6 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet var ExploreArea: UIView!
     
     @IBOutlet var BottomNav: UIView!
+    
+    let notify = NotificationHandler()
     
     @IBSegueAction func embedSwiftUIView(_ coder: NSCoder) -> UIViewController? {
         return UIHostingController(coder: coder, rootView: SwiftUIView())
@@ -38,30 +38,9 @@ class ViewController: UIViewController {
     //The CoreML model we use for emotion classification.
     private let model = try! VNCoreMLModel(for: CNNEmotions(configuration: MLModelConfiguration()).model)
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.isEqual(ExploreScrollView) {
-            switch scrollView.panGestureRecognizer.state {
-                case .began:
-                    // User began dragging
-                    print("began")
-                case .changed:
-                    // User is currently dragging the scroll view
-                    print("changed")
-                case .possible:
-                    // The scroll view scrolling but the user is no longer touching the scrollview (table is decelerating)
-                    UIView.animate(withDuration: 0.3, animations: {
-                        self.ExploreArea.layer.position.y = 50
-                        scrollView.layoutIfNeeded()
-                    })
-                    print("possible")
-                default:
-                    break
-            }
-        }
-    }
-    
     // MARK: HELPER FUNCTIONS
-
+    
+    
     // Add camera input from the user's front camera
 //    private func addCameraInput() {
 //        
@@ -127,9 +106,21 @@ class ViewController: UIViewController {
 //    }
 //}
     
+    @IBAction func addNotification(_ sender: Any) {
+        self.notify.sendNotification(
+            date: Date(),
+            type: "time",
+            timeInterval: 5,
+            title: "Be Careful!",
+            body: "Your current state can negatively impact your driving abilities!")
+    }
+    
     // MARK: LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        notify.askPermission()
+        
         // Do any additional setup after loading the view
         
         //addCameraInput()
