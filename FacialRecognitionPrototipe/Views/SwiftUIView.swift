@@ -51,13 +51,31 @@ struct SwiftUIView: View {
                                 LazyVStack(alignment: .leading, spacing: 15, content: {
                                     if !mapData.locations.isEmpty && mapData.searchText != "" {
                                         ForEach(mapData.locations) { location in
-                                            Text(location.place.name ?? "").onTapGesture {
-                                                offset = 0
-                                                hideLocationsList.toggle()
-                                                mapData.searchText = location.place.name ?? mapData.searchText
-                                                showRouteOnMap(pickupCoordinate: mapData.region.center, destinationCoordinate: location.coordinate)
+                                            HStack{
+                                                VStack(alignment: .leading){
+                                                    Text(location.place.name ?? "")
+                                                    Text(location.getCaption()).font(.caption)
+                                                }.onTapGesture {
+                                                    offset = 0
+                                                    hideLocationsList.toggle()
+                                                    mapData.searchText = location.place.name ?? mapData.searchText
+                                                    showRouteOnMap(pickupCoordinate: mapData.region.center, destinationCoordinate: location.coordinate)
+                                                }
+                                                Spacer()
+                                                Image("star").contextMenu(ContextMenu(menuItems: {
+                                                    let story = UIStoryboard(name: "Main", bundle: nil)
+                                                    let itemController = story.instantiateViewController(identifier: "TableElementViewController") as! TableElementViewController
+                                                    let listController = story.instantiateViewController(identifier: "GuardadoViewController") as! GuardadoViewController
+                                                    let listItems = listController.getAllListItems()
+                                                    Section("Saved Lists") {
+                                                        ForEach(listItems) { item in
+                                                            Button(item.listName ?? "") {
+                                                                itemController.createLocation(name: location.place.name ?? "")
+                                                            }
+                                                        }
+                                                    }
+                                                }))
                                             }
-                                            Text(location.getCaption()).font(.caption)
                                             Divider()
                                         }
                                     }
@@ -68,7 +86,7 @@ struct SwiftUIView: View {
                                 .padding()
                             })
                         }
-                        .background(Color.white)
+                        .background(Color(uiColor: .systemBackground))
                         .cornerRadius(15)
                     }
                         .offset(y: height - 200)

@@ -1,7 +1,7 @@
 import SwiftUI
 import MapKit
 
-struct Location: Identifiable {
+struct MapLocation: Identifiable {
     var id = UUID().uuidString
     var place: CLPlacemark
     var coordinate: CLLocationCoordinate2D

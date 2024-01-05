@@ -11,7 +11,7 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
 
     @Published var searchText: String = ""
 
-    @Published var locations: [Location] = []
+    @Published var locations: [MapLocation] = []
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         switch manager.authorizationStatus {
@@ -51,11 +51,11 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
                 location = CLLocation(latitude: self.region.center.latitude, longitude: self.region.center.longitude)
             }
 
-            self.locations = result.mapItems.compactMap({(item) -> Location? in
+            self.locations = result.mapItems.compactMap({(item) -> MapLocation? in
                 let latitude = item.placemark.coordinate.latitude, longitude = item.placemark.coordinate.longitude
                 let itemLocation = CLLocation(latitude: latitude, longitude: longitude)
                 let dist = location != nil ? location.distance(from: itemLocation) / 1000 : 0
-                return Location(place: item.placemark, coordinate: item.placemark.coordinate, dist: dist)
+                return MapLocation(place: item.placemark, coordinate: item.placemark.coordinate, dist: dist)
             })
         }
     }

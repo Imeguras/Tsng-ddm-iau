@@ -76,7 +76,6 @@ class TableElementViewController: UIViewController, UITableViewDelegate, UITable
     func saveListItem() {
         do {
             try locationsContext.save()
-            getAllLocationsAndRefresh()
         }
         catch {
         }
@@ -87,12 +86,7 @@ class TableElementViewController: UIViewController, UITableViewDelegate, UITable
         newLocation.locationName = name
         locationsModels.append(newLocation)
         
-        self.LocationsTableView.beginUpdates()
-        self.LocationsTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
-        self.LocationsTableView.endUpdates()
-        
         saveListItem()
-        changePlacesAmount(increaseValue: true)
     }
     
     func deleteLocation(indexPath: IndexPath) {
