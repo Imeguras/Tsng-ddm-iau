@@ -5,9 +5,10 @@
 
 import UIKit
 import Vision
-import UserNotificationsUI
-import AVFoundation
 import SwiftUI
+import AVFoundation
+import UserNotifications
+import UserNotificationsUI
 
 class ViewController: UIViewController {
 
@@ -20,6 +21,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var BottomNav: UIView!
     
+    private var selectedDate = Date()
     let notify = NotificationHandler()
     
     @IBSegueAction func embedSwiftUIView(_ coder: NSCoder) -> UIViewController? {
@@ -107,12 +109,11 @@ class ViewController: UIViewController {
 //}
     
     @IBAction func addNotification(_ sender: Any) {
+        print("pressed")
         self.notify.sendNotification(
-            date: Date(),
-            type: "time",
-            timeInterval: 5,
+            timeInterval: 1,
             title: "Be Careful!",
-            body: "Your current state can negatively impact your driving abilities!")
+            body: "Your current state can negatively impact your driving abilities.")
     }
     
     // MARK: LIFECYCLE

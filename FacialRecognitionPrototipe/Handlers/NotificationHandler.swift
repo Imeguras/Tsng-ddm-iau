@@ -12,14 +12,11 @@ class NotificationHandler {
         }
     }
     
-    func sendNotification(date: Date, type: String, timeInterval: Double, title: String, body: String) {
+    func sendNotification(timeInterval: Double, title: String, body: String) {
         var trigger: UNNotificationTrigger?
-        if type == "date" {
-            let dateComponents = Calendar.current.dateComponents([.day, .month, .year, .hour, .minute], from: date)
-            trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
-        } else if type == "timeInterval" {
-            trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
-        }
+        print("timeInterval: ", timeInterval)
+        
+        trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
         
         let content = UNMutableNotificationContent()
         content.title = title
