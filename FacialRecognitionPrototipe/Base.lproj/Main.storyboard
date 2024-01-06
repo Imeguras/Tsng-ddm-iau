@@ -279,6 +279,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="MoE-NF-YGJ"/>
                         <segue destination="ETt-rL-fHs" kind="relationship" relationship="viewControllers" id="RBj-Vi-Hd4"/>
+                        <segue destination="fwv-Pr-bFu" kind="relationship" relationship="viewControllers" id="YcY-bC-IVZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UHI-Ap-WDb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -379,12 +380,41 @@
             </objects>
             <point key="canvasLocation" x="-741" y="-716"/>
         </scene>
+        <!--Log Out-->
+        <scene sceneID="jXu-nq-gkT">
+            <objects>
+                <viewController id="fwv-Pr-bFu" customClass="MapaViewController" customModule="FacialRecognitionPrototipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZQz-k0-lCZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GzN-rE-YeX">
+                                <rect key="frame" x="131" y="410" width="131" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                <connections>
+                                    <action selector="logout:" destination="fwv-Pr-bFu" eventType="touchUpInside" id="22o-sM-fXy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a5k-f4-18C"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Log Out" image="power" catalog="system" selectedImage="power" id="Ggv-Cq-zln"/>
+                    <navigationItem key="navigationItem" id="KgS-Z8-wi4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TL9-62-uac" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4547" y="17"/>
+        </scene>
     </scenes>
     <resources>
         <image name="book" catalog="system" width="128" height="99"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="location" catalog="system" width="128" height="119"/>
         <image name="location.fill" catalog="system" width="128" height="119"/>
+        <image name="power" catalog="system" width="127" height="128"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
