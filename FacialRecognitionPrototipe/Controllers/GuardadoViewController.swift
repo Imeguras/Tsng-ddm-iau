@@ -14,44 +14,6 @@ class GuardadoViewController: UIViewController, UITableViewDelegate, UITableView
     private var models = [SavedListItem]()
     
     // MARK: HELPER FUNCTIONS
-    private func checkForPermission() {
-        let notificationCenter = UNUserNotificationCenter.current()
-        notificationCenter.getNotificationSettings { settings in
-            switch settings.authorizationStatus {
-            case .notDetermined:
-                notificationCenter.requestAuthorization(options: [.alert, .sound]) { didAllow, error in
-                    if didAllow {
-                        self.dispatchNotification()
-                    }
-                }
-            case .denied:
-                return
-            case .authorized:
-                self.dispatchNotification()
-            default:
-                return
-            }
-        }
-    }
-    
-    private func dispatchNotification() {
-        let identifier = "emotion-notification"
-        let title = "Be careful"
-        let body = "Your current state can have a negative impact on your driving abilities."
-        
-        let notificationCenter = UNUserNotificationCenter.current()
-        let content = UNMutableNotificationContent()
-        content.title = title
-        content.body = body
-        content.sound = .default
-        
-        //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: <#T##TimeInterval#>, repeats: <#T##Bool#>)
-        //let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-        
-        notificationCenter.removePendingNotificationRequests(withIdentifiers: [identifier])
-        //notificationCenter.add(request)
-    }
-    
     @IBAction func PressButton(_ sender: UIButton) {
         let point = sender.superview?.convert(sender.center, to: self.ListTableView) ?? CGPoint.zero
         guard let indexPath = self.ListTableView.indexPathForRow(at: point) else {return}

@@ -1,4 +1,8 @@
 import UIKit
+import MapKit
+// MARK: Combine framework to watch textfield change
+import Combine
+import CoreLocation
 
 class TableElementViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -7,6 +11,11 @@ class TableElementViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var placesAmount: UILabel!
     
     @IBOutlet weak var LocationsTableView: UITableView!
+    
+    var cancellable: AnyCancellable?
+    
+    var searchText: String = ""
+    var fetchedPlaces: [CLPlacemark]?
     
     var listReference = SavedListItem()
     
@@ -26,10 +35,6 @@ class TableElementViewController: UIViewController, UITableViewDelegate, UITable
         cell.configureItem(locationName: model.locationName ?? "<location-not-found>")
         
         return cell
-    }
-    
-    @IBAction func addItemPressed(_ sender: Any) {
-        createLocation(name: "teste")
     }
     
     @IBAction func deleteElementPressed(_ sender: Any) {
@@ -67,7 +72,6 @@ class TableElementViewController: UIViewController, UITableViewDelegate, UITable
     func saveListItem() {
         do {
             try locationsContext.save()
-            getAllLocationsAndRefresh()
         }
         catch {
         }
@@ -78,12 +82,7 @@ class TableElementViewController: UIViewController, UITableViewDelegate, UITable
         newLocation.locationName = name
         locationsModels.append(newLocation)
         
-        self.LocationsTableView.beginUpdates()
-        self.LocationsTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
-        self.LocationsTableView.endUpdates()
-        
         saveListItem()
-        changePlacesAmount(increaseValue: true)
     }
     
     func deleteLocation(indexPath: IndexPath) {
@@ -112,6 +111,32 @@ class TableElementViewController: UIViewController, UITableViewDelegate, UITable
         
         listReference.locationNumber = Int32(places)
         placesAmount.text = String(places)
+    }
+    
+    func fetchPlaces (value: String){
+        // MARK: Fetching places using MKLocalSearch and Asyc/Await
+        Task {
+            do {
+                let request = MKLocalSearch.Request()
+                request.naturalLanguageQuery = value.lowercased()
+                
+                let response = try await MKLocalSearch(request: request).start()
+                
+                await MainActor.run(body: {
+                    self.fetchedPlaces = response.mapItems.compactMap({ item -> CLPlacemark? in
+                        return item.placemark
+                        
+                    })
+                })
+            }
+            catch {
+                // HANDLE ERROR
+            }
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Bool){
+        // HANDLE ERROR
     }
     
     override func viewDidLoad() {

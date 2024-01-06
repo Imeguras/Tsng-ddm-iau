@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C96443D2AF1840E00CC7D3D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C96443C2AF1840E00CC7D3D /* CoreData.framework */; };
 		A206ADF72B44C1F90027E629 /* LocationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A206ADF52B44C1F90027E629 /* LocationsTableViewCell.swift */; };
 		A206ADF82B44C1F90027E629 /* LocationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A206ADF62B44C1F90027E629 /* LocationsTableViewCell.xib */; };
 		A206ADFF2B44DE370027E629 /* LocationList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A206ADFD2B44DE370027E629 /* LocationList+CoreDataClass.swift */; };
 		A206AE002B44DE370027E629 /* LocationList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A206ADFE2B44DE370027E629 /* LocationList+CoreDataProperties.swift */; };
-		2C96443D2AF1840E00CC7D3D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C96443C2AF1840E00CC7D3D /* CoreData.framework */; };
-		A20EAA8C2AE2E4B100792341 /* CNNEmotions.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A20EAA8B2AE2E4B100792341 /* CNNEmotions.mlmodel */; };
 		A23303862B3DFFE40072C34C /* TableElementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23303852B3DFFE40072C34C /* TableElementViewController.swift */; };
 		A2331B4A2AE19676008120BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2331B492AE19676008120BD /* AppDelegate.swift */; };
 		A2331B4C2AE19676008120BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2331B4B2AE19676008120BD /* SceneDelegate.swift */; };
@@ -26,15 +25,21 @@
 		A2331B7B2AE19715008120BD /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2331B7A2AE19715008120BD /* Vision.framework */; };
 		A2331B7D2AE1971B008120BD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2331B7C2AE1971B008120BD /* AVFoundation.framework */; };
 		A2331B7F2AE19723008120BD /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2331B7E2AE19723008120BD /* CoreML.framework */; };
+		A23A2CA32B473BD9009538F4 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A2CA22B473BD9009538F4 /* MapView.swift */; };
+		A23A2CA52B473BF6009538F4 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A2CA42B473BF6009538F4 /* BlurView.swift */; };
+		A23A2CA72B473C28009538F4 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A2CA62B473C28009538F4 /* MapViewModel.swift */; };
+		A23A2CA92B473C4B009538F4 /* MapLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A2CA82B473C4B009538F4 /* MapLocation.swift */; };
 		A24DB5892B19602100930405 /* GuardadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24DB5882B19602100930405 /* GuardadoViewController.swift */; };
 		A25AD5C62B18F5C00026EF1C /* SavedListItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AD5C42B18F5C00026EF1C /* SavedListItem+CoreDataClass.swift */; };
 		A25AD5C72B18F5C00026EF1C /* SavedListItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25AD5C52B18F5C00026EF1C /* SavedListItem+CoreDataProperties.swift */; };
 		A25AD5C92B18FA970026EF1C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25AD5C82B18FA970026EF1C /* CoreData.framework */; };
 		A265DF3F2B05149B003BF504 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A265DF3E2B05149B003BF504 /* SwiftUIView.swift */; };
 		A268B2752B166F7E001A6443 /* NavSenseDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A268B2732B166F7E001A6443 /* NavSenseDataModel.xcdatamodeld */; };
+		A279279F2B46332C00BCF666 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A279279E2B46332C00BCF666 /* NotificationHandler.swift */; };
 		A28A0CFB2B28CAB500F3D97B /* EditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28A0CF92B28CAB500F3D97B /* EditTableViewCell.swift */; };
 		A28A0CFC2B28CAB500F3D97B /* EditTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28A0CFA2B28CAB500F3D97B /* EditTableViewCell.xib */; };
-		A2FDD82C2B45A4D30059C612 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FDD82B2B45A4D30059C612 /* LocationService.swift */; };
+		A2AD98E92B48C4D000163995 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AD98E82B48C4D000163995 /* LoginViewController.swift */; };
+		A2AD98EF2B48C58900163995 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AD98EE2B48C58900163995 /* AuthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,13 +60,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C96443C2AF1840E00CC7D3D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		A206ADF52B44C1F90027E629 /* LocationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsTableViewCell.swift; sourceTree = "<group>"; };
 		A206ADF62B44C1F90027E629 /* LocationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationsTableViewCell.xib; sourceTree = "<group>"; };
 		A206ADFD2B44DE370027E629 /* LocationList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationList+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A206ADFE2B44DE370027E629 /* LocationList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationList+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2C96443C2AF1840E00CC7D3D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		A20EAA892AE2D79D00792341 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
-		A20EAA8B2AE2E4B100792341 /* CNNEmotions.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = CNNEmotions.mlmodel; path = ../../../Downloads/CNNEmotions.mlmodel; sourceTree = "<group>"; };
 		A23303852B3DFFE40072C34C /* TableElementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableElementViewController.swift; sourceTree = "<group>"; };
 		A2331B462AE19676008120BD /* FacialRecognitionPrototipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacialRecognitionPrototipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2331B492AE19676008120BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,15 +83,21 @@
 		A2331B7A2AE19715008120BD /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
 		A2331B7C2AE1971B008120BD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A2331B7E2AE19723008120BD /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
+		A23A2CA22B473BD9009538F4 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		A23A2CA42B473BF6009538F4 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		A23A2CA62B473C28009538F4 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		A23A2CA82B473C4B009538F4 /* MapLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocation.swift; sourceTree = "<group>"; };
 		A24DB5882B19602100930405 /* GuardadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardadoViewController.swift; sourceTree = "<group>"; };
 		A25AD5C42B18F5C00026EF1C /* SavedListItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedListItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A25AD5C52B18F5C00026EF1C /* SavedListItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedListItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A25AD5C82B18FA970026EF1C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A265DF3E2B05149B003BF504 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		A268B2742B166F7E001A6443 /* NavSenseDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NavSenseDataModel.xcdatamodel; sourceTree = "<group>"; };
+		A279279E2B46332C00BCF666 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		A28A0CF92B28CAB500F3D97B /* EditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTableViewCell.swift; sourceTree = "<group>"; };
 		A28A0CFA2B28CAB500F3D97B /* EditTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditTableViewCell.xib; sourceTree = "<group>"; };
-		A2FDD82B2B45A4D30059C612 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		A2AD98E82B48C4D000163995 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A2AD98EE2B48C58900163995 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +138,7 @@
 				A2331B692AE1967A008120BD /* FacialRecognitionPrototipeUITests */,
 				A2331B472AE19676008120BD /* Products */,
 				A2331B792AE19714008120BD /* Frameworks */,
+				A27927632B4612AF00BCF666 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,20 +155,18 @@
 		A2331B482AE19676008120BD /* FacialRecognitionPrototipe */ = {
 			isa = PBXGroup;
 			children = (
+				A2AD98ED2B48C57C00163995 /* Managers */,
+				A2AD98E72B48C43B00163995 /* Controllers */,
+				A23A2CA02B473B31009538F4 /* Views */,
+				A279279D2B4631BD00BCF666 /* Handlers */,
 				A2A13C142B45CDA200EAC733 /* TableViewCell */,
-				A2F4F7F52B45A2DD004CEAA7 /* Services */,
 				A28090982B1A549C00A5E885 /* Assets */,
 				A2F8D0672B18F04D00D73300 /* DataModel */,
 				A2331B492AE19676008120BD /* AppDelegate.swift */,
 				A2331B4B2AE19676008120BD /* SceneDelegate.swift */,
-				A2331B4D2AE19676008120BD /* MapaViewController.swift */,
-				A24DB5882B19602100930405 /* GuardadoViewController.swift */,
 				A2331B4F2AE19676008120BD /* Main.storyboard */,
 				A2331B542AE19679008120BD /* LaunchScreen.storyboard */,
 				A2331B572AE19679008120BD /* Info.plist */,
-				A20EAA8B2AE2E4B100792341 /* CNNEmotions.mlmodel */,
-				A265DF3E2B05149B003BF504 /* SwiftUIView.swift */,
-				A23303852B3DFFE40072C34C /* TableElementViewController.swift */,
 			);
 			path = FacialRecognitionPrototipe;
 			sourceTree = "<group>";
@@ -191,6 +200,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A23A2CA02B473B31009538F4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A23A2CA22B473BD9009538F4 /* MapView.swift */,
+				A23A2CA42B473BF6009538F4 /* BlurView.swift */,
+				A265DF3E2B05149B003BF504 /* SwiftUIView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A27927632B4612AF00BCF666 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				2C96443C2AF1840E00CC7D3D /* CoreData.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		A279279D2B4631BD00BCF666 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				A279279E2B46332C00BCF666 /* NotificationHandler.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
 		A28090982B1A549C00A5E885 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,17 +245,30 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
-		A2F4F7F52B45A2DD004CEAA7 /* Services */ = {
+		A2AD98E72B48C43B00163995 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A2FDD82B2B45A4D30059C612 /* LocationService.swift */,
+				A2331B4D2AE19676008120BD /* MapaViewController.swift */,
+				A24DB5882B19602100930405 /* GuardadoViewController.swift */,
+				A23303852B3DFFE40072C34C /* TableElementViewController.swift */,
+				A2AD98E82B48C4D000163995 /* LoginViewController.swift */,
 			);
-			path = Services;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A2AD98ED2B48C57C00163995 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A2AD98EE2B48C58900163995 /* AuthManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		A2F8D0672B18F04D00D73300 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				A23A2CA62B473C28009538F4 /* MapViewModel.swift */,
+				A23A2CA82B473C4B009538F4 /* MapLocation.swift */,
 				A206ADFD2B44DE370027E629 /* LocationList+CoreDataClass.swift */,
 				A206ADFE2B44DE370027E629 /* LocationList+CoreDataProperties.swift */,
 				A25AD5C42B18F5C00026EF1C /* SavedListItem+CoreDataClass.swift */,
@@ -246,6 +294,8 @@
 			dependencies = (
 			);
 			name = FacialRecognitionPrototipe;
+			packageProductDependencies = (
+			);
 			productName = FacialRecognitionPrototipe;
 			productReference = A2331B462AE19676008120BD /* FacialRecognitionPrototipe.app */;
 			productType = "com.apple.product-type.application";
@@ -318,6 +368,8 @@
 				Base,
 			);
 			mainGroup = A2331B3D2AE19676008120BD;
+			packageReferences = (
+			);
 			productRefGroup = A2331B472AE19676008120BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -364,14 +416,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				A206AE002B44DE370027E629 /* LocationList+CoreDataProperties.swift in Sources */,
+				A2AD98EF2B48C58900163995 /* AuthManager.swift in Sources */,
 				A268B2752B166F7E001A6443 /* NavSenseDataModel.xcdatamodeld in Sources */,
-				A20EAA8C2AE2E4B100792341 /* CNNEmotions.mlmodel in Sources */,
+				A23A2CA92B473C4B009538F4 /* MapLocation.swift in Sources */,
 				A2331B4E2AE19676008120BD /* MapaViewController.swift in Sources */,
 				A2331B4A2AE19676008120BD /* AppDelegate.swift in Sources */,
+				A23A2CA52B473BF6009538F4 /* BlurView.swift in Sources */,
 				A24DB5892B19602100930405 /* GuardadoViewController.swift in Sources */,
+				A2AD98E92B48C4D000163995 /* LoginViewController.swift in Sources */,
 				A25AD5C72B18F5C00026EF1C /* SavedListItem+CoreDataProperties.swift in Sources */,
-				A2FDD82C2B45A4D30059C612 /* LocationService.swift in Sources */,
 				A206ADFF2B44DE370027E629 /* LocationList+CoreDataClass.swift in Sources */,
+				A23A2CA32B473BD9009538F4 /* MapView.swift in Sources */,
+				A23A2CA72B473C28009538F4 /* MapViewModel.swift in Sources */,
+				A279279F2B46332C00BCF666 /* NotificationHandler.swift in Sources */,
 				A2331B4C2AE19676008120BD /* SceneDelegate.swift in Sources */,
 				A265DF3F2B05149B003BF504 /* SwiftUIView.swift in Sources */,
 				A206ADF72B44C1F90027E629 /* LocationsTableViewCell.swift in Sources */,
@@ -569,7 +626,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -600,7 +657,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
