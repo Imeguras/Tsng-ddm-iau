@@ -179,7 +179,7 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_________________________________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dp-KO-i5l">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="_________________________________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dp-KO-i5l">
                                 <rect key="frame" x="-17" y="184" width="427" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.92156857250000002" green="0.92156857250000002" blue="0.92156857250000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -191,18 +191,6 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwt-iH-Hib">
-                                <rect key="frame" x="273" y="35" width="97" height="31"/>
-                                <color key="tintColor" red="0.79980072380444156" green="0.8961099483670657" blue="0.96611279249191284" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="+ Adicionar">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
-                                    <color key="baseForegroundColor" systemColor="systemBlueColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="addItemPressed:" destination="sl2-ni-Ums" eventType="touchUpInside" id="Vjh-RF-0Hh"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1Mg-Q7-xwr">
                                 <rect key="frame" x="0.0" y="174" width="393" height="678"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -246,37 +234,24 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lista de locais" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqv-cB-Frs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Lista de locais" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqv-cB-Frs">
                                 <rect key="frame" x="29.999999999999993" y="213" width="94.333333333333314" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="DPt-AZ-ebc">
-                                <rect key="frame" x="0.0" y="143" width="393" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="sl2-ni-Ums" id="XKr-KR-EJQ"/>
-                                </connections>
-                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8RM-mY-Ca0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1ss-Cp-pO8" firstAttribute="centerX" secondItem="ghb-qq-Gf6" secondAttribute="centerX" id="5Gv-ol-MJf"/>
-                            <constraint firstItem="gwt-iH-Hib" firstAttribute="top" secondItem="V78-XD-Y4f" secondAttribute="bottom" constant="20" id="5u2-l0-ihX"/>
-                            <constraint firstItem="1dp-KO-i5l" firstAttribute="top" secondItem="gwt-iH-Hib" secondAttribute="bottom" id="A9F-z6-pBj"/>
-                            <constraint firstItem="gwt-iH-Hib" firstAttribute="leading" secondItem="8RM-mY-Ca0" secondAttribute="leading" constant="50" id="AIx-kd-IdO"/>
                             <constraint firstItem="V78-XD-Y4f" firstAttribute="top" secondItem="1ss-Cp-pO8" secondAttribute="bottom" constant="3" id="HFo-C0-lJ3"/>
-                            <constraint firstItem="DPt-AZ-ebc" firstAttribute="trailing" secondItem="8RM-mY-Ca0" secondAttribute="trailing" id="U9g-bk-nzU"/>
                             <constraint firstItem="V78-XD-Y4f" firstAttribute="leading" secondItem="Bjr-ge-nae" secondAttribute="trailing" constant="3" id="YET-mo-g4O"/>
                             <constraint firstItem="eqv-cB-Frs" firstAttribute="top" secondItem="1dp-KO-i5l" secondAttribute="bottom" constant="12" id="YOt-0f-35x"/>
-                            <constraint firstItem="DPt-AZ-ebc" firstAttribute="leading" secondItem="8RM-mY-Ca0" secondAttribute="leading" id="YPE-fV-xYJ"/>
                             <constraint firstItem="1ss-Cp-pO8" firstAttribute="top" secondItem="8RM-mY-Ca0" secondAttribute="top" constant="25" id="beT-2k-e9x"/>
                             <constraint firstItem="V78-XD-Y4f" firstAttribute="centerX" secondItem="ghb-qq-Gf6" secondAttribute="centerX" id="bqX-h2-SWs"/>
                             <constraint firstItem="eqv-cB-Frs" firstAttribute="leading" secondItem="8RM-mY-Ca0" secondAttribute="leading" constant="30" id="css-rs-elu"/>
                             <constraint firstItem="Bjr-ge-nae" firstAttribute="top" secondItem="1ss-Cp-pO8" secondAttribute="bottom" constant="3" id="dvJ-Fx-c2f"/>
-                            <constraint firstItem="DPt-AZ-ebc" firstAttribute="top" secondItem="1ss-Cp-pO8" secondAttribute="bottom" constant="30" id="twk-qs-36G"/>
                             <constraint firstItem="1dp-KO-i5l" firstAttribute="centerX" secondItem="ghb-qq-Gf6" secondAttribute="centerX" id="u1L-wL-k3f"/>
                         </constraints>
                     </view>
@@ -414,19 +389,19 @@
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
-            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tableCellGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

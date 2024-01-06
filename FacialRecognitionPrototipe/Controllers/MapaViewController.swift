@@ -1,18 +1,44 @@
-//
-//  ViewController.swift
-//  FacialRecognition
-//
-
 import UIKit
 import Vision
 import SwiftUI
 import AVFoundation
 import UserNotifications
 import UserNotificationsUI
+import CoreLocation
+import CoreML
+import CoreData
 
-class MapaViewController: UIViewController {
+class MapaViewController: UIViewController, CLLocationManagerDelegate {
     
     // MARK: VARIABLES
+    
+    // Store
+    // Reference to managed object context
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    var managedObjectContext: NSManagedObjectContext {
+        return context
+    }
+    
+    var items: [UserLocation]?
+    
+    //var managedObjectContext: NSManagedObjectContext? {
+      //  let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        //return appDelegate?.persistentContainer.viewContext
+   // }
+    // Store
+    
+    private var locationManager:CLLocationManager?
+    
+    /*private var latLngLabel:UILabel = {
+        let label = UILabel()
+        label.backgroundColor = .systemFill
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.font = .systemFont(ofSize: 26)
+        return label
+    } ()*/
+
     private var selectedDate = Date()
     let notify = NotificationHandler()
     
@@ -124,6 +150,68 @@ class MapaViewController: UIViewController {
         // Start capturing from the camera
         DispatchQueue.global(qos: .background).async{
          self.captureSession.startRunning()
+        }
+        
+        /*latLngLabel.frame = CGRect(x: 20, y: view.bounds.height / 2 - 50, width: view.bounds.width - 40, height: 100)
+        view.addSubview(latLngLabel)*/
+        
+        locationManager = CLLocationManager()
+        locationManager?.requestAlwaysAuthorization()
+        locationManager?.startUpdatingLocation()
+        locationManager?.delegate = self
+        locationManager?.allowsBackgroundLocationUpdates = true
+        
+        // tableView.dataSource = self
+        // tableView.delegate = self
+        
+        // Get items from Core Data
+        fetchCoordinates()
+        
+        //login()
+    }
+    
+    // Ao clicar no botão Logout
+    @IBAction func logout(_ sender: UIButton) {
+        // Clear the access token when the user logs out
+            AuthManager.shared.clearAccessToken()
+        
+            print("User deu logout")
+
+            // Navigate to the login screen
+            self.navigationController?.popToRootViewController(animated: true)
+
+    }
+    
+    func fetchCoordinates() {
+        // Fetch the data from Core Data
+        do {
+            self.items = try context.fetch(UserLocation.fetchRequest())
+            
+            //DispatchQueue.main.async {
+              //  self.tableView.reloadData()
+            //}
+        }
+        catch {
+            print("Error fetching coordinates from Core Data: (error)")
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            /*latLngLabel.text =  "Lat: \(location.coordinate.latitude) \nLng: \(location.coordinate.longitude)"*/
+            
+            // Criar uma instância da entidade Location
+            let newLocation = UserLocation(context: managedObjectContext)
+            newLocation.latitude = location.coordinate.latitude
+            newLocation.longitude = location.coordinate.longitude
+
+             // Salvar a instância no Core Data
+            do {
+                try managedObjectContext.save()
+                print("Localização guardada no Core Data")
+            } catch {
+                print("Erro ao salvar a localização no Core Data: (error)")
+            }
         }
     }
     

@@ -37,10 +37,6 @@ class TableElementViewController: UIViewController, UITableViewDelegate, UITable
         return cell
     }
     
-    @IBAction func addItemPressed(_ sender: Any) {
-        createLocation(name: "teste")
-    }
-    
     @IBAction func deleteElementPressed(_ sender: Any) {
         let point = (sender as AnyObject).superview?.convert((sender as AnyObject).center, to: self.LocationsTableView) ?? CGPoint.zero
         guard let indexPath = self.LocationsTableView.indexPathForRow(at: point) else {return}

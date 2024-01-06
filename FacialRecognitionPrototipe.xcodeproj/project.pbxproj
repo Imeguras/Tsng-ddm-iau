@@ -36,13 +36,9 @@
 		A265DF3F2B05149B003BF504 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A265DF3E2B05149B003BF504 /* SwiftUIView.swift */; };
 		A268B2752B166F7E001A6443 /* NavSenseDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A268B2732B166F7E001A6443 /* NavSenseDataModel.xcdatamodeld */; };
 		A279279F2B46332C00BCF666 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A279279E2B46332C00BCF666 /* NotificationHandler.swift */; };
-		A27F8E342B489B75004B4DAC /* CNNEmotions.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A27F8E332B489B75004B4DAC /* CNNEmotions.mlmodel */; };
 		A28A0CFB2B28CAB500F3D97B /* EditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28A0CF92B28CAB500F3D97B /* EditTableViewCell.swift */; };
 		A28A0CFC2B28CAB500F3D97B /* EditTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28A0CFA2B28CAB500F3D97B /* EditTableViewCell.xib */; };
-		A2AD98E42B48C3C700163995 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AD98E32B48C3C700163995 /* Location+CoreDataClass.swift */; };
-		A2AD98E62B48C3EC00163995 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AD98E52B48C3EC00163995 /* Location+CoreDataProperties.swift */; };
 		A2AD98E92B48C4D000163995 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AD98E82B48C4D000163995 /* LoginViewController.swift */; };
-		A2AD98EC2B48C52000163995 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2AD98EA2B48C52000163995 /* Model.xcdatamodeld */; };
 		A2AD98EF2B48C58900163995 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AD98EE2B48C58900163995 /* AuthManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,13 +94,9 @@
 		A265DF3E2B05149B003BF504 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		A268B2742B166F7E001A6443 /* NavSenseDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NavSenseDataModel.xcdatamodel; sourceTree = "<group>"; };
 		A279279E2B46332C00BCF666 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
-		A27F8E332B489B75004B4DAC /* CNNEmotions.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = CNNEmotions.mlmodel; path = ../../../.Trash/CNNEmotions.mlmodel; sourceTree = "<group>"; };
 		A28A0CF92B28CAB500F3D97B /* EditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTableViewCell.swift; sourceTree = "<group>"; };
 		A28A0CFA2B28CAB500F3D97B /* EditTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditTableViewCell.xib; sourceTree = "<group>"; };
-		A2AD98E32B48C3C700163995 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A2AD98E52B48C3EC00163995 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A2AD98E82B48C4D000163995 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		A2AD98EB2B48C52000163995 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		A2AD98EE2B48C58900163995 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,7 +166,6 @@
 				A2331B4B2AE19676008120BD /* SceneDelegate.swift */,
 				A2331B4F2AE19676008120BD /* Main.storyboard */,
 				A2331B542AE19679008120BD /* LaunchScreen.storyboard */,
-				A27F8E332B489B75004B4DAC /* CNNEmotions.mlmodel */,
 				A2331B572AE19679008120BD /* Info.plist */,
 			);
 			path = FacialRecognitionPrototipe;
@@ -283,9 +274,6 @@
 				A25AD5C42B18F5C00026EF1C /* SavedListItem+CoreDataClass.swift */,
 				A25AD5C52B18F5C00026EF1C /* SavedListItem+CoreDataProperties.swift */,
 				A268B2732B166F7E001A6443 /* NavSenseDataModel.xcdatamodeld */,
-				A2AD98E32B48C3C700163995 /* Location+CoreDataClass.swift */,
-				A2AD98E52B48C3EC00163995 /* Location+CoreDataProperties.swift */,
-				A2AD98EA2B48C52000163995 /* Model.xcdatamodeld */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -429,16 +417,12 @@
 			files = (
 				A206AE002B44DE370027E629 /* LocationList+CoreDataProperties.swift in Sources */,
 				A2AD98EF2B48C58900163995 /* AuthManager.swift in Sources */,
-				A2AD98EC2B48C52000163995 /* Model.xcdatamodeld in Sources */,
 				A268B2752B166F7E001A6443 /* NavSenseDataModel.xcdatamodeld in Sources */,
 				A23A2CA92B473C4B009538F4 /* MapLocation.swift in Sources */,
 				A2331B4E2AE19676008120BD /* MapaViewController.swift in Sources */,
 				A2331B4A2AE19676008120BD /* AppDelegate.swift in Sources */,
 				A23A2CA52B473BF6009538F4 /* BlurView.swift in Sources */,
 				A24DB5892B19602100930405 /* GuardadoViewController.swift in Sources */,
-				A27F8E342B489B75004B4DAC /* CNNEmotions.mlmodel in Sources */,
-				A2AD98E62B48C3EC00163995 /* Location+CoreDataProperties.swift in Sources */,
-				A2AD98E42B48C3C700163995 /* Location+CoreDataClass.swift in Sources */,
 				A2AD98E92B48C4D000163995 /* LoginViewController.swift in Sources */,
 				A25AD5C72B18F5C00026EF1C /* SavedListItem+CoreDataProperties.swift in Sources */,
 				A206ADFF2B44DE370027E629 /* LocationList+CoreDataClass.swift in Sources */,
@@ -814,16 +798,6 @@
 			);
 			currentVersion = A268B2742B166F7E001A6443 /* NavSenseDataModel.xcdatamodel */;
 			path = NavSenseDataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		A2AD98EA2B48C52000163995 /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A2AD98EB2B48C52000163995 /* Model.xcdatamodel */,
-			);
-			currentVersion = A2AD98EB2B48C52000163995 /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
